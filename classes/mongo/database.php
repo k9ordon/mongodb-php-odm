@@ -108,7 +108,7 @@ class Mongo_Database {
       if ($config === NULL)
       {
         // Load the configuration for this database
-        $config = Kohana::$config->load('mongo')->$name;
+        $config = configMongo::current();
       }
 
       new self($name,$config);
